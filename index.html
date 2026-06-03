@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Color Picker</h1>
+        
+        <!-- Color input -->
+        <div class="color-input-section">
+            <label for="colorInput">Pick a Color:</label>
+            <input type="color" id="colorInput" value="#3498db">
+        </div>
+
+        <!-- Color display -->
+        <div class="color-display" id="colorDisplay"></div>
+
+        <!-- Color codes -->
+        <div class="color-codes">
+            <div class="code-item">
+                <label>HEX:</label>
+                <span id="hexCode">#3498db</span>
+                <button class="copy-btn" onclick="copyToClipboard('hexCode')">Copy</button>
+            </div>
+            <div class="code-item">
+                <label>RGB:</label>
+                <span id="rgbCode">rgb(52, 152, 219)</span>
+                <button class="copy-btn" onclick="copyToClipboard('rgbCode')">Copy</button>
+            </div>
+        </div>
+
+        <!-- Preset colors -->
+        <div class="preset-section">
+            <h3>Quick Preset Colors:</h3>
+            <div class="preset-colors">
+                <button class="preset-btn" style="background-color: #FF6B6B;" onclick="pickColor('#FF6B6B')"></button>
+                <button class="preset-btn" style="background-color: #4ECDC4;" onclick="pickColor('#4ECDC4')"></button>
+                <button class="preset-btn" style="background-color: #FFE66D;" onclick="pickColor('#FFE66D')"></button>
+                <button class="preset-btn" style="background-color: #95E1D3;" onclick="pickColor('#95E1D3')"></button>
+                <button class="preset-btn" style="background-color: #F38181;" onclick="pickColor('#F38181')"></button>
+                <button class="preset-btn" style="background-color: #AA96DA;" onclick="pickColor('#AA96DA')"></button>
+                <button class="preset-btn" style="background-color: #000000;" onclick="pickColor('#000000')"></button>
+                <button class="preset-btn" style="background-color: #FFFFFF; border: 2px solid #ddd;" onclick="pickColor('#FFFFFF')"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
